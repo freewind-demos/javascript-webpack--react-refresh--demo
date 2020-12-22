@@ -1,8 +1,9 @@
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const HtmlWebpackPlugin =  require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './entry.jsx',
+  entry: './src/entry.jsx',
   output: {
     path: __dirname,
     filename: 'bundle.js'
@@ -29,6 +30,7 @@ module.exports = {
     }]
   },
   plugins: [
+    new HtmlWebpackPlugin(),
     new ReactRefreshWebpackPlugin(),
   ]
 }
