@@ -1,11 +1,10 @@
-import React,{Component} from 'react';
+import React, {useState} from 'react';
 
-class Hello extends Component {
-	render() {
-		return <div>
-		  <h1>Hello Freewind</h1>
-		</div>;
-	}
+export const Hello = () => {
+  const [name, setName] = useState('');
+  return <div>
+    <h1>Hello {name}</h1>
+    <div>Input something in the textfield, and change me to see if it's still kept</div>
+    <input type='text' value={name} onChange={(event) => setName(event.target.value)}/>
+  </div>;
 }
-
-export default Hello;

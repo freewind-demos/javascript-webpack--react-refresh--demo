@@ -1,3 +1,5 @@
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+
 module.exports = {
   mode: 'development',
   entry: './entry.jsx',
@@ -25,5 +27,8 @@ module.exports = {
         }
       }
     }]
-  }
+  },
+  plugins: [
+    new ReactRefreshWebpackPlugin(),
+  ]
 }
